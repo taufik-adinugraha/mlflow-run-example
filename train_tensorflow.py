@@ -21,8 +21,10 @@ mlflow.set_experiment(experiment_name)
 mlflow.keras.autolog() 
 
 # parameters
-epochs = int(sys.argv[1]) if len(sys.argv) > 1 else 20
-learning_rate = float(sys.argv[2]) if len(sys.argv) > 2 else 0.01
+# epochs = int(sys.argv[1]) if len(sys.argv) > 1 else 20
+# learning_rate = float(sys.argv[2]) if len(sys.argv) > 2 else 0.01
+epochs = int(sys.argv[1])
+learning_rate = float(sys.argv[2])
 
 # import some data to play with
 (ds_train, ds_val), ds_info = tfds.load(
