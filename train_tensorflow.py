@@ -11,7 +11,7 @@ def normalize_img(image, label):
   """Normalizes images: `uint8` -> `float32`."""
   return tf.cast(image, tf.float32) / 255., label
 
-if __main__ == 'main':
+if __main__ == '__main__':
     warnings.filterwarnings("ignore")
 
     # connect to tracking URI
