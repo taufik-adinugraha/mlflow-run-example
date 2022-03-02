@@ -9,6 +9,10 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
+# set experiment name to organize runs
+experiment_name = 'MNIST'
+mlflow.set_experiment(experiment_name)
+
 # automatic logging allows us to log metrics, parameters, and models without the need for explicit log statements
 mlflow.keras.autolog() 
 
