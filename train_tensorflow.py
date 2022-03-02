@@ -9,20 +9,10 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
-# connect to tracking URI
-# URI can either be a HTTP/HTTPS URI for a remote server, or a local path to log data to a directory
-mlflow.set_tracking_uri('./myml') 
-
-# set experiment name to organize runs
-experiment_name = 'MNIST'
-mlflow.set_experiment(experiment_name)
-
 # automatic logging allows us to log metrics, parameters, and models without the need for explicit log statements
 mlflow.keras.autolog() 
 
 # parameters
-# epochs = int(sys.argv[1]) if len(sys.argv) > 1 else 20
-# learning_rate = float(sys.argv[2]) if len(sys.argv) > 2 else 0.01
 epochs = int(sys.argv[1])
 learning_rate = float(sys.argv[2])
 
